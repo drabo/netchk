@@ -2,8 +2,6 @@
 
 ## Container useful for connectivity checks in Kubernetes
 
-Based on python:3.8.5-alpine3.12
+Based on either Alpine or Debian Buster
 
-Added Alpine packages: curl openssl jq iproute2 bind-tools net-tools stunnel iperf tcpdump procps vim wget
-
-Added Python modules: yq
+Added packages: see for each image
