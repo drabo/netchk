@@ -1,4 +1,4 @@
-FROM python:3.8.5-alpine3.12
+FROM python:3.8.6-alpine3.12
 
 RUN apk update && \
     apk upgrade && \
@@ -8,7 +8,7 @@ RUN apk update && \
 
 RUN pip install yq
 
-# EXPOSE 8000
-# CMD ["python", "-m", "http.server"]
+EXPOSE 8000
+CMD ["python", "-m", "http.server"]
 
-CMD ["sleep", "86400"]
+# CMD ["sleep", "86400"]
