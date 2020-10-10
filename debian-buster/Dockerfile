@@ -1,9 +1,9 @@
-FROM python:3.8.5-slim-buster
+FROM python:3.8.6-slim-buster
 
 RUN apt-get update && \
     apt-get -qq upgrade && \
     apt-get -qq --no-install-recommends install \
-        curl openssl jq iproute2 dnsutils net-tools stunnel iperf tcpdump procps vim wget netcat iputils-ping && \
+        curl openssl jq iproute2 dnsutils net-tools stunnel iperf tcpdump procps vim wget netcat iputils-ping traceroute && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install yq
