@@ -1,4 +1,6 @@
-FROM python:3.8.6-slim-buster
+ARG PY_VER
+
+FROM python:${PY_VER}-slim-buster
 
 RUN apt-get update && \
     apt-get -qq upgrade && \

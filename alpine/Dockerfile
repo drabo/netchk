@@ -1,4 +1,6 @@
-FROM python:3.8.6-alpine3.12
+ARG PY_VER
+
+FROM python:${PY_VER}-alpine3.12
 
 RUN apk update && \
     apk upgrade && \
