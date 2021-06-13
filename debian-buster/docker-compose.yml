@@ -9,5 +9,3 @@ services:
         restart: always
         tty: true
         network_mode: "bridge"
-        environment:
-            TZ: Europe/Bucharest
