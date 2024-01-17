@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: admin
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netchk
+  namespace: admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netchk
+  template:
+    metadata:
+      labels:
+        app: netchk
+    spec:
+      containers:
+      - image: drabo/netchk:debian-buster
+        imagePullPolicy: Always
+        name: netchk
+        env:
+        - name: TZ
+          value: UTC
