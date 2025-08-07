@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+    netchk-debian-bookworm:
+        build:
+            context: .
+        container_name: netchk-debian-bookworm
+        hostname: netchk-debian-bookworm
+        restart: always
+        tty: true
+        network_mode: "bridge"
