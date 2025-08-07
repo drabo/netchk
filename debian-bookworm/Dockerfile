@@ -1,5 +1,5 @@
 ARG PY_VER
-FROM python:${PY_VER}-slim-buster
+FROM python:${PY_VER}-slim-bookworm
 
 RUN apt-get update && \
     apt-get -qq upgrade && \
