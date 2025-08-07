@@ -21,7 +21,7 @@ spec:
         app: netchk
     spec:
       containers:
-      - image: drabo/netchk:debian-buster
+      - image: drabo/netchk:debian-bookworm
         imagePullPolicy: Always
         name: netchk
         env:
